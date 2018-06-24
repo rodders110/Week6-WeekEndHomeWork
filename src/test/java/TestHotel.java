@@ -74,6 +74,15 @@ public class TestHotel {
         assertEquals("David, Adri", hotel.checkedIn(bedroom2));
 
     }
+
+    @Test
+    public void canDisplayEmptyBedRooms() {
+        hotel.checkin(bedroom3, guest4);
+        hotel.checkin(bedroom3, guest5);
+        hotel.checkin(bedroom3, guest6);
+
+        assertEquals("1, 2", hotel.emptyBedRooms());
+    }
 }
 
 
